@@ -50,7 +50,7 @@ nav a{
     margin-left: 1.25rem;
 }
 .container{
-    background-image: url('images/two-business-men-and-women.jpg');
+    background-image: url('../images/two-business-men-and-women.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
