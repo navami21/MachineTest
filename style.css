@@ -6,13 +6,15 @@ html,body{
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
+*,*::before,*::after{
+    box-sizing: border-box;
+}
 header{
     background-color:#154360;
     display: flex;
     height: 1.875rem;
     color: white;
     font-size: 0.75rem;
-    font-family: Arial, Helvetica, sans-serif;
     justify-content: space-between;
     
     
@@ -23,7 +25,8 @@ ul{
     gap: 0.3125rem;
 }
 .right-icon{
-    justify-content: right;
+    display: flex;
+    justify-content: flex-end;
     gap: 1.25rem;
     margin-right: 1.875rem;
 }
@@ -43,7 +46,6 @@ nav a{
     align-items: center;
     padding: 10px;
     margin: 0;
-    align-items: center;
 }
 .navbar ul .logo{
     margin-right: auto;
@@ -79,7 +81,7 @@ nav a{
     width:50%;
 }
 .left-content p{
-    margin-top: 0.313rem;    ;
+    margin-top: 0.313rem;    
     margin-bottom: 0.313rem;
 }
 .btn{
@@ -114,7 +116,7 @@ form input, form button{
     display: block;
     width:100%;
     margin-bottom: 0.9375rem;
-    padding:  0 0.125rem 0.625rem;
+    padding:  0.5rem;
     border:1px solid;
     border-radius: 0.3125rem;
     margin-top: 0.125rem;
@@ -132,7 +134,10 @@ form button{
     text-align: center;
     padding: 0.3125rem;
 }
-
+button:focus,input:focus{
+    outline: 0.125rem solid black;
+    outline-offset: 0.125rem ;
+}
 .check-box{
 
     font-size: 0.75rem;
@@ -184,7 +189,7 @@ form button{
     font-size: 0.9rem;
     line-height: 1.5;
 }
-@media (max-widt:1024Px){
+@media (max-width:1024px){
     .section-2{
         padding: 0 5%;
     }
@@ -230,7 +235,7 @@ form button{
         text-align: center;
     }
 }
-@media (max-width:480px){
+@media (max-width: 468px){
     .left-icons, .right-icon{
         flex-direction: column;
         gap: 0.5rem;
@@ -246,6 +251,10 @@ form button{
         flex-direction: column;
         align-items: flex-start;
     }
+    .right-form{
+        margin-bottom: 1rem;
+        margin-top: auto;
+    }
 }
 @keyframes fadeInUp{
     0%{
@@ -253,8 +262,8 @@ form button{
         transform: translateY(20px);
     }
     100%{
-        opacity: 2;
-        transform: translateY(20px);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 .left-content h1{
