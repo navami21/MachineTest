@@ -141,7 +141,7 @@ button:focus,input:focus{
     outline-offset: 0.125rem ;
 }
 .check-box{
-
+    outline: none;
     font-size: 0.75rem;
     margin-bottom: 0.9375rem;
 }
